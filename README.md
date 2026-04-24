@@ -5,13 +5,13 @@
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 > Run locally using the instructions below.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 | Canvas | Simulation Panel |
 |--------|-----------------|
@@ -19,7 +19,7 @@
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 ```bash
 # 1. Clone the repository
@@ -40,7 +40,7 @@ http://localhost:5173
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
@@ -53,7 +53,7 @@ http://localhost:5173
 
 ---
 
-## 🗂️ Project Architecture
+## Project Architecture
 
 ```
 src/
@@ -88,7 +88,7 @@ src/
 
 ---
 
-## 🎨 Design Decisions
+## Design Decisions
 
 ### 1. Zustand over Context/Redux
 Zustand was chosen for its minimal API and zero boilerplate. With React Context, passing canvas state (nodes, edges, selectedNodeId, simulationResult) through the component tree would require multiple providers or prop drilling. Zustand gives us a single `useWorkflowStore` hook accessible anywhere — including inside node components — without any wrapping.
@@ -113,55 +113,55 @@ Rather than adding React Hook Form or Formik, forms are built with controlled co
 
 ---
 
-## ✅ Features Implemented
+## Features Implemented
 
 ### Core
-- [x] Drag-and-drop workflow canvas (React Flow)
-- [x] 5 custom node types: Start, Task, Approval, Automated, End
-- [x] Drag nodes from sidebar onto canvas
-- [x] Connect nodes with animated edges
-- [x] Delete nodes and edges
-- [x] Node selection with orange highlight glow
+-  Drag-and-drop workflow canvas (React Flow)
+-  5 custom node types: Start, Task, Approval, Automated, End
+-  Drag nodes from sidebar onto canvas
+-  Connect nodes with animated edges
+-  Delete nodes and edges
+-  Node selection with orange highlight glow
 
 ### Node Configuration
-- [x] Start Node — title + dynamic metadata key-value pairs
-- [x] Task Node — title, description, assignee, due date, custom fields
-- [x] Approval Node — title, approver role (dropdown), auto-approve threshold
-- [x] Automated Node — title, action picker (from mock API), dynamic param inputs
-- [x] End Node — end message + show summary toggle
+-  Start Node — title + dynamic metadata key-value pairs
+-  Task Node — title, description, assignee, due date, custom fields
+-  Approval Node — title, approver role (dropdown), auto-approve threshold
+-  Automated Node — title, action picker (from mock API), dynamic param inputs
+-  End Node — end message + show summary toggle
 
 ### Mock API Layer
-- [x] `GET /automations` — returns 5 automation actions with param definitions
-- [x] `POST /simulate` — accepts workflow JSON, returns step-by-step execution log
-- [x] Artificial network delays (300ms / 1500ms) to simulate real API behavior
+-  `GET /automations` — returns 5 automation actions with param definitions
+-  `POST /simulate` — accepts workflow JSON, returns step-by-step execution log
+-  Artificial network delays (300ms / 1500ms) to simulate real API behavior
 
 ### Workflow Validation
-- [x] Must have exactly one Start node
-- [x] Must have exactly one End node
-- [x] All nodes must be connected (no orphaned nodes)
-- [x] Start node must have no incoming edges
-- [x] End node must have no outgoing edges
-- [x] Cycle detection using DFS
-- [x] Validation errors shown in sidebar + simulation modal
+-  Must have exactly one Start node
+-  Must have exactly one End node
+-  All nodes must be connected (no orphaned nodes)
+-  Start node must have no incoming edges
+-  End node must have no outgoing edges
+-  Cycle detection using DFS
+-  Validation errors shown in sidebar + simulation modal
 
 ### Simulation Panel
-- [x] Validates workflow before running
-- [x] Shows errors as a list if workflow is invalid
-- [x] Loading state while simulation runs
-- [x] Step-by-step execution timeline with status icons
-- [x] Success/failure result banner
+-  Validates workflow before running
+-  Shows errors as a list if workflow is invalid
+-  Loading state while simulation runs
+-  Step-by-step execution timeline with status icons
+-  Success/failure result banner
 
 ### UI/UX
-- [x] Dark theme throughout (#1E1E2E background)
-- [x] MiniMap with color-coded nodes
-- [x] Canvas controls (zoom in/out, fit view, lock)
-- [x] Validation error count in navbar and sidebar
-- [x] Clear canvas button (resets to initial Start + End state)
-- [x] Responsive panels (sidebar 220px, config panel 300px)
+-  Dark theme throughout (#1E1E2E background)
+-  MiniMap with color-coded nodes
+-  Canvas controls (zoom in/out, fit view, lock)
+-  Validation error count in navbar and sidebar
+-  Clear canvas button (resets to initial Start + End state)
+-  Responsive panels (sidebar 220px, config panel 300px)
 
 ---
 
-## 🔧 What I Would Add With More Time
+## What I Would Add With More Time
 
 ### Features
 - **Export/Import JSON** — serialize workflow to file and reload it
@@ -186,7 +186,7 @@ Rather than adding React Hook Form or Formik, forms are built with controlled co
 
 ---
 
-## 🧪 Running Validation Manually
+## Running Validation Manually
 
 To test the validation system:
 1. Open the app — you'll see 2 validation errors (Start and End are not connected)
@@ -196,7 +196,7 @@ To test the validation system:
 
 ---
 
-## 📐 Component Extensibility
+## Component Extensibility
 
 Adding a new node type takes exactly 4 steps:
 ```
@@ -210,11 +210,11 @@ No other files need to change. This demonstrates the open/closed principle.
 
 ---
 
-## 👤 Author
+## Author
 
-**[Your Name]**  
-[GitHub](https://github.com/YOUR_USERNAME) • [LinkedIn](https://linkedin.com/in/YOUR_USERNAME)
+**Abhijeet Dey**  
+[GitHub](https://github.com/abhijeetdey2911/) • [LinkedIn](www.linkedin.com/in/abhijeet-dey-7438861b9)
 
 ---
 
-*Built as part of the Tredence Studio AI Engineering Internship — 2025 Cohort case study.*
+*Built for the Tredence Studio AI Engineering Internship — 2025 Cohort case study.*
