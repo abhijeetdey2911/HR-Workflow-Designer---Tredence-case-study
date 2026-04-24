@@ -23,7 +23,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/hr-workflow-designer.git
+git clone https://github.com/abhijeetdey2911/HR-Workflow-Designer---Tredence-case-study.git
 cd hr-workflow-designer
 
 # 2. Install dependencies
